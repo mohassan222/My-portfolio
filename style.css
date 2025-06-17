@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Wix Madefor Text", sans-serif;
+  background-color: #000000; /* خلفية سوداء */
+  width: 100%;
+  text-align: center;
+  color: #ffffff; /* لون النص أبيض */
+}
+
+@media (max-width: 768px) {
+  .about-me .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .my-pic img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .text {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+nav {
+  width: 100%;
+  position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3px 30px;
+  margin-top: 5px;
+  margin-left: 0px;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 999; /* تأكد من أن الشريط العلوي فوق كل شيء */
+  transition: 0.3s ease-in-out;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin-right: 300px;
+  padding: 10px;
+  font-family: "Wix Madefor Text", sans-serif;
+  border: #ffffff solid 1px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  font-size: 143x;
+  padding: 4px 8px;
+  transition: color 0.3s;
+  font-family: "Wix Madefor Text", sans-serif;
+}
+
+.bold {
+  font-weight: normal;
+  color: #ffffff; /* ابيض */
+}
+
+.normal {
+  font-weight: bold;
+  color: hwb(0 100% 0%); /* أبيض */
+}
+nav ul li a:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+nav ul li a:active {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 30%);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+nav ul li a:visited {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+nav ul li a:focus {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+nav ul li a:active:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 30%);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+nav ul li a:focus:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 30%);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.me {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #ffffff; /* Border color */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.video-section {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+.video-overlay {
+  position: absolute;
+  top: 1150px; /* نزّله تحت شوية */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.video-overlay p {
+  font-size: 18px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.video-overlay .button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.video-overlay .button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* يخليهم ينزلوا تحت بعض لو الشاشة صغيرة */
+}
+
+.my-pic img {
+  width: 700 px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.my-info-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 20px;
+  width: 500px;
+  height: 450px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.my-info-box h3 {
+  font-family: "Wix Madefor Text", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+.my-info-box p {
+  font-family: "Wix Madefor Text", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(105, 105, 105);
+  border-radius: 10px;
+}
+
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.typing-container h2 {
+  font-family: "Wix Madefor Text", sans-serif;
+  font-size: 80px;
+  color: #ffffff;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+
+  width: 0;
+  animation: typing 6s steps(70, end) infinite, blink 0.7s step-end infinite;
+}
+
+/* Animation keyframes */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 52%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
