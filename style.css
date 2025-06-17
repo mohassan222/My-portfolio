@@ -24,6 +24,45 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-right: 0;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .my-info-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .typing-container h2 {
+    font-size: 40px;
+  }
+
+  .video-overlay {
+    top: 70%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  .video-overlay p {
+    font-size: 16px;
+  }
+}
+
 nav {
   width: 100%;
   position: sticky;
@@ -196,10 +235,9 @@ nav ul li a:focus:hover {
 }
 
 .my-pic img {
-  width: 700 px;
-  height: 500px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .my-info-box {
@@ -269,5 +307,60 @@ nav ul li a:focus:hover {
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .my-pic img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .my-info-box {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .typing-container h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .video-overlay {
+    position: static;
+    transform: none;
+    padding: 15px;
+    margin-top: -50px;
+    width: 90%;
+  }
+
+  .video-overlay p {
+    font-size: 16px;
+  }
+
+  .video-overlay .button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
